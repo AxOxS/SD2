@@ -39,11 +39,12 @@ while True:
         "1. Konvertavimas iš °F į °C\n" + 
         "2. Konvertavimas iš °C į °F\n\n" + 
         "[1-2]: "))
-        
+        #Išvaloma consolė
         os.system('cls')
         
         if F_or_C == 1:
             F = float(input("Įveskite temperatūrą, kurią norite konvertuoti: "))
+            #Išvaloma consolė
             os.system('cls')
             if(F >= -459):
                 C = 5/9 * (F - 32)
@@ -56,6 +57,7 @@ while True:
                 
         elif F_or_C == 2:
             C = float(input("Įveskite temperatūrą, kurią norite konvertuoti: "))
+            #Išvaloma consolė
             os.system('cls')
             if(C >= -273):
                 F = C * (9/5) + 32
@@ -68,16 +70,40 @@ while True:
                 
         else:
             print("Rinkitės skaičių tarp 1 ir 2!")
-            
+    
+    #pasirenkama trečia programa       
     elif x == 3:
-       mi_or_km = int(input("Pasirinkite kokią operaciją norite atlikti: \n\n" +
+        mi_or_km = int(input("Pasirinkite kokią operaciją norite atlikti: \n\n" +
         "1. Konvertavimas iš mi į km\n" + 
         "2. Konvertavimas iš km į mi\n\n" + 
         "[1-2]: "))
+        #Išvaloma consolė
+        os.system('cls')
        
-       os.system('cls')
-       
-       if mi_or_km == 1:
+        if mi_or_km == 1:
+           mi = float(input("Įveskite atstumą, kurį norite konvertuoti: "))
+           #Išvaloma consolė
+           os.system('cls')
+           if mi >= 0:
+               km = mi * 1.61
+               rounded_km = round(km, 2)
+               print(mi, "mi yra lygu", rounded_km, "km")
+           else:
+               print("Įveskite teigiamą skaičių!")
+               
+        elif mi_or_km == 2:
+            km = float(input("Įveskite atstumą, kurį norite konvertuoti: "))
+            #Išvaloma consolė
+            os.system('cls')
+            if km >= 0:
+               mi = km * 0.621371
+               rounded_mi = round(mi, 2)
+               print(km, "km yra lygu", rounded_mi, "mi")
+            else:
+               print("Įveskite teigiamą skaičių!")
+               
+        else:
+            print("Rinkitės skaičių tarp 1 ir 2!")
            
             
     #Duodamas pasirinkimas grįžti į programų sąrašą arba terminuoti programą       
