@@ -104,8 +104,24 @@ while True:
                
         else:
             print("Rinkitės skaičių tarp 1 ir 2!")
-           
-            
+    
+    #pasirenkama ketvirta programa
+    elif x == 4:
+        #programa prašo įvesti trikampio a ir b kraštines
+        x = float(input("Įveskite stačiojo trikampio kraštinę a (cm): "))
+        y = float(input("Įveskite stačiojo trikampio kraštinę b (cm): "))
+        #Išvaloma consolė
+        os.system('cls')
+        #if logika tikrina ar bent vienas iš duotų skaičių yra mažesnis ar lygus 0, jeigu taip - programa terminuojama
+        if x <= 0 or y <= 0:
+            print("Veskite tik teigiamus skaičius!")
+        #Jeigu atitinka duotą kriterijų ir praeina iki else'o - apskaičiuojamas plotas
+        else:
+            S = (x * y) / 2
+            #Apskaičiuotas float skaitmuo suapvalinamas iki šimtųjų
+            rounded_S = round(S, 2)
+            print("Stačiojo trikampio plotas:", rounded_S, "cm²")
+        
     #Duodamas pasirinkimas grįžti į programų sąrašą arba terminuoti programą       
     restart = input("Programa darbą baigė, ar norite paleisti ją iš naujo? [y/n]: ")
     #Programa restartuojama
