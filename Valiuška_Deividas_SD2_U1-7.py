@@ -1,5 +1,5 @@
 import os
-import time
+#import time
 #Išvalomas komandos langas, jeigu programa leidžiama dar kartą. Programos prisistatymas, turinio parodymas ir vartotojo prašymas pasirinkti programą.
 #Prašomas integer tipo skaitmuo, jeigu bus įvesta kažkas kitokio - programa sustos
 while True:
@@ -177,7 +177,10 @@ while True:
         art_vid = suma / 6
         rounded_vidurkis = round(art_vid, 2)
         print("Įvestų skaičių aritmetinis vidurkis yra:", rounded_vidurkis)
-        
+    
+    #Išimtis    
+    else:
+        print("Įveskite skaičių tarp 1 ir 7!")       
     #Duodamas pasirinkimas grįžti į programų sąrašą arba terminuoti programą       
     restart = input("Programa darbą baigė, ar norite paleisti ją iš naujo? [y/n]: ")
     #Programa restartuojama
