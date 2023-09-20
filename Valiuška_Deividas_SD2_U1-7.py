@@ -1,4 +1,5 @@
 import os
+import time
 #Išvalomas komandos langas, jeigu programa leidžiama dar kartą. Programos prisistatymas, turinio parodymas ir vartotojo prašymas pasirinkti programą.
 #Prašomas integer tipo skaitmuo, jeigu bus įvesta kažkas kitokio - programa sustos
 while True:
@@ -124,7 +125,8 @@ while True:
             #Apskaičiuotas float skaitmuo suapvalinamas iki šimtųjų
             rounded_S = round(S, 2)
             print("Stačiojo trikampio plotas:", rounded_S, "cm²")
-            
+    
+    #pasirenkama penkta programa        
     elif x == 5:
         #Vartotojas įveda norimą skaičių
         x = float(input("Įveskite skaičių: "))
@@ -139,7 +141,30 @@ while True:
             print("Įvestas skaičius yra neigiamas.")
         else:
             print("Įvestas skaičius yra lygus nuliui.")
-
+            
+    #pasirenkama šešta programa
+    elif x == 6:
+        #aprašomi...
+        teigiami = 0
+        neigiami = 0
+        nuliai = 0
+        
+        print("Įveskite 10 skaičių \n")
+        #time.sleep(5)
+        #os.system('cls')
+        for i in range(10):
+            x = float(input(f"Įveskite skaičių nr {i + 1}: "))
+            
+            if x > 0:
+                teigiami += 1
+            elif x < 0:
+                neigiami += 1
+            else:
+                nuliai += 1
+        os.system('cls')
+        print(f"Teigiami skaičiai: {teigiami}")
+        print(f"Neigiami skaičiai: {neigiami}")
+        print(f"Nuliai: {nuliai}")
         
     #Duodamas pasirinkimas grįžti į programų sąrašą arba terminuoti programą       
     restart = input("Programa darbą baigė, ar norite paleisti ją iš naujo? [y/n]: ")
@@ -148,5 +173,6 @@ while True:
         continue
     #Programa terminuojama
     else:
+        os.system('cls')
         print("Viso gero")
         break
