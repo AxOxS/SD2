@@ -166,6 +166,17 @@ while True:
         print(f"Neigiami skaičiai: {neigiami}")
         print(f"Nuliai: {nuliai}")
         
+    elif x == 7:
+        suma = 0
+        print("Įveskite 6 skaičius\n")
+        for i in range(6):
+            x = float(input(f"Įveskite skaičių nr {i + 1}: "))
+            suma += x
+        os.system('cls')
+        art_vid = suma / 6
+        rounded_vidurkis = round(art_vid, 2)
+        print("Įvestų skaičių aritmetinis vidurkis yra:", rounded_vidurkis)
+        
     #Duodamas pasirinkimas grįžti į programų sąrašą arba terminuoti programą       
     restart = input("Programa darbą baigė, ar norite paleisti ją iš naujo? [y/n]: ")
     #Programa restartuojama
