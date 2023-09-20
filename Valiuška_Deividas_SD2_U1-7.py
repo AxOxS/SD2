@@ -166,6 +166,7 @@ while True:
         print(f"Neigiami skaičiai: {neigiami}")
         print(f"Nuliai: {nuliai}")
         
+    #pasirenkama septinta programa
     elif x == 7:
         suma = 0
         print("Įveskite 6 skaičius\n")
